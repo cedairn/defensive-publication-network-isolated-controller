@@ -8,7 +8,9 @@ authors:
     affiliation: "cedairn open design"
     website: "https://cedairn.com"
 date-released: 2026-11-15
+doi: 10.5281/zenodo.24242916
 license: CC-BY-4.0
+url: "https://doi.org/10.5281/zenodo.24242916"
 repository: "https://github.com/cedairn/defensive-publication-network-isolated-controller"
 keywords:
   - defensive publication

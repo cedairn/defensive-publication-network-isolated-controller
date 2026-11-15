@@ -2,6 +2,7 @@
 
 **First published:** 15 November 2026  
 **Author:** Ian Beard — [cedairn open design](https://cedairn.com)  
+**DOI:** [10.5281/zenodo.24242916](https://doi.org/10.5281/zenodo.24242916)  
 **Licence:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Purpose
@@ -46,7 +47,11 @@ which is detected, but cannot change control behaviour or forge data.
 
 Beard, I. (2026). *Defensive Publication: Network-Isolated Autonomous Controller with
 Unidirectional Data Egress.* cedairn open design. First published 15 November 2026.
-https://github.com/cedairn/defensive-publication-network-isolated-controller
+https://doi.org/10.5281/zenodo.24242916
+
+## Also archived at
+
+- Zenodo: https://doi.org/10.5281/zenodo.24242916
 
 ## Licence
 
