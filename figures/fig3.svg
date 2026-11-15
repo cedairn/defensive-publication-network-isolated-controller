@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#000}
+      .b{fill:#fff;stroke:#000;stroke-width:2}
+      .l{stroke:#000;stroke-width:2;fill:none}
+      .t{font-size:15px;text-anchor:middle}
+      .n{font-size:15px;font-weight:bold}
+      .s{font-size:13px}
+    </style>
+  </defs>
+  <rect width="1100" height="720" fill="#fff"/>
+
+  <!-- floor -->
+  <line x1="40" y1="620" x2="1060" y2="620" class="l"/>
+
+  <!-- freezer cabinet -->
+  <rect x="90" y="250" width="360" height="370" class="b"/>
+  <rect x="115" y="290" width="310" height="300" class="b"/>
+  <line x1="405" y1="400" x2="405" y2="480" stroke="#000" stroke-width="5"/>
+  <text x="270" y="450" class="t">Freezer cabinet</text>
+
+  <!-- controller enclosure 120 on top -->
+  <rect x="90" y="150" width="360" height="100" class="b"/>
+  <text x="105" y="178" class="n">120 / 100</text>
+  <text x="105" y="198" class="s">sealed enclosure with</text>
+  <text x="105" y="215" class="s">control module (no receiver)</text>
+
+  <!-- optical port 130 -->
+  <circle cx="450" cy="200" r="12" fill="#fff" stroke="#000" stroke-width="3"/>
+  <circle cx="450" cy="200" r="4" fill="#000"/>
+  <line x1="450" y1="188" x2="470" y2="120" class="l"/>
+  <text x="472" y="115" class="n">130</text>
+  <text x="508" y="115" class="s">optical read port (emitter only)</text>
+
+  <!-- light beam -->
+  <line x1="465" y1="208" x2="700" y2="342" stroke="#000" stroke-width="2" stroke-dasharray="8,6" marker-end="url(#a)"/>
+  <text x="520" y="300" class="s" transform="rotate(29 520 300)">signed records, repeating</text>
+
+  <!-- robot 600 -->
+  <rect x="700" y="320" width="90" height="60" class="b"/>
+  <circle cx="712" cy="350" r="8" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="745" y="356" class="s" style="font-size:11px">detector</text>
+  <line x1="745" y1="380" x2="745" y2="410" class="l"/>
+  <rect x="660" y="410" width="170" height="170" class="b"/>
+  <circle cx="690" cy="595" r="20" class="b"/>
+  <circle cx="800" cy="595" r="20" class="b"/>
+  <text x="745" y="490" class="n" text-anchor="middle">600</text>
+  <text x="745" y="510" class="t">Mobile robot</text>
+  <text x="745" y="528" class="t" style="font-size:12px">(untrusted courier)</text>
+
+  <!-- antenna and waves -->
+  <line x1="775" y1="320" x2="775" y2="270" class="l"/>
+  <path d="M790,265 a20,20 0 0,1 0,-30" class="l"/>
+  <path d="M800,275 a35,35 0 0,1 0,-50" class="l"/>
+  <path d="M810,285 a50,50 0 0,1 0,-70" class="l"/>
+
+  <!-- separate channel to 500 -->
+  <line x1="830" y1="230" x2="878" y2="140" class="l" stroke-dasharray="6,4" marker-end="url(#a)"/>
+  <text x="860" y="210" class="s">separate channel</text>
+  <rect x="860" y="40" width="200" height="90" class="b"/>
+  <text x="960" y="75" class="n" text-anchor="middle">500</text>
+  <text x="960" y="97" class="t">Remote receiver</text>
+  <text x="960" y="114" class="t" style="font-size:12px">(verifies signatures)</text>
+
+  <text x="550" y="690" class="t" style="font-size:20px;font-weight:bold">FIG. 3</text>
+</svg>

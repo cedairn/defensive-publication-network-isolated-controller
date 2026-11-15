@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#000}
+      .b{fill:#fff;stroke:#000;stroke-width:2}
+      .l{stroke:#000;stroke-width:2;fill:none}
+      .t{font-size:15px;text-anchor:middle}
+      .n{font-size:15px;font-weight:bold;text-anchor:middle}
+      .s{font-size:13px}
+      .h{font-size:16px;font-weight:bold}
+    </style>
+  </defs>
+  <rect width="1100" height="720" fill="#fff"/>
+
+  <!-- 120 enclosure -->
+  <rect x="40" y="60" width="530" height="530" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="10,6"/>
+  <text x="55" y="85" class="h">120  Tamper-evident enclosure</text>
+
+  <!-- 100 control module -->
+  <rect x="70" y="100" width="470" height="460" class="b"/>
+  <text x="85" y="125" class="h">100  Control module</text>
+
+  <!-- internal bus -->
+  <line x1="300" y1="185" x2="300" y2="450" class="l"/>
+  <text x="306" y="240" class="s">bus</text>
+  <polyline points="160,450 160,435 445,435 445,450" class="l"/>
+
+  <!-- row 1 -->
+  <rect x="100" y="150" width="180" height="70" class="b"/>
+  <text x="190" y="180" class="n">102</text><text x="190" y="202" class="t">Processor</text>
+  <rect x="320" y="150" width="190" height="70" class="b"/>
+  <text x="415" y="180" class="n">104</text><text x="415" y="202" class="t">Neural-net accelerator</text>
+  <line x1="280" y1="185" x2="320" y2="185" class="l"/>
+
+  <!-- row 2 -->
+  <rect x="100" y="250" width="180" height="70" class="b"/>
+  <text x="190" y="278" class="n">106</text><text x="190" y="298" class="t">Program memory</text><text x="190" y="314" class="t" style="font-size:12px">(immutable)</text>
+  <rect x="320" y="250" width="190" height="70" class="b"/>
+  <text x="415" y="278" class="n">108</text><text x="415" y="298" class="t">Key store</text><text x="415" y="314" class="t" style="font-size:12px">(immutable)</text>
+  <line x1="280" y1="285" x2="320" y2="285" class="l"/>
+
+  <!-- row 3 -->
+  <rect x="100" y="350" width="180" height="70" class="b"/>
+  <text x="190" y="380" class="n">110</text><text x="190" y="402" class="t">Sensor inputs</text>
+  <rect x="320" y="350" width="190" height="70" class="b"/>
+  <text x="415" y="380" class="n">112</text><text x="415" y="402" class="t">Actuator outputs</text>
+  <line x1="280" y1="385" x2="320" y2="385" class="l"/>
+
+  <!-- row 4 -->
+  <rect x="100" y="450" width="120" height="70" class="b"/>
+  <text x="160" y="480" class="n">114</text><text x="160" y="502" class="t">Local alarm</text>
+  <rect x="235" y="450" width="130" height="70" class="b"/>
+  <text x="300" y="478" class="n">116</text><text x="300" y="498" class="t">Isolated</text><text x="300" y="514" class="t">power supply</text>
+  <rect x="380" y="450" width="130" height="70" class="b"/>
+  <text x="445" y="478" class="n">118</text><text x="445" y="498" class="t">Optical</text><text x="445" y="514" class="t">transmitter</text>
+  
+
+  <!-- sensors in -->
+  <line x1="5" y1="385" x2="98" y2="385" class="l" marker-end="url(#a)"/>
+  <text x="6" y="375" class="s">probes</text>
+
+  <!-- actuators out -->
+  <polyline points="510,385 525,385 525,22" class="l" marker-end="url(#a)"/>
+  <text x="535" y="28" class="s">to compressor, fans,</text>
+  <text x="535" y="44" class="s">defrost heater</text>
+
+  <!-- 300 one-way link -->
+  <line x1="510" y1="485" x2="698" y2="485" stroke="#000" stroke-width="4" marker-end="url(#a)"/>
+  <text x="635" y="430" class="n">300</text>
+  <text x="635" y="450" class="t" style="font-size:13px">one-way</text>
+  <text x="635" y="467" class="t" style="font-size:13px">optical link</text>
+  <text x="635" y="510" class="t" style="font-size:12px">no reverse</text>
+  <text x="635" y="525" class="t" style="font-size:12px">path</text>
+
+  <!-- 200 network module -->
+  <rect x="700" y="170" width="240" height="430" class="b"/>
+  <text x="715" y="195" class="h">200  Network module</text>
+  <text x="715" y="213" class="s">(untrusted, replaceable)</text>
+
+  <rect x="720" y="230" width="200" height="70" class="b"/>
+  <text x="820" y="260" class="n">206</text><text x="820" y="282" class="t">Network interface</text>
+  <rect x="720" y="340" width="200" height="70" class="b"/>
+  <text x="820" y="370" class="n">204</text><text x="820" y="392" class="t">Processor</text>
+  <rect x="720" y="450" width="200" height="70" class="b"/>
+  <text x="820" y="480" class="n">202</text><text x="820" y="502" class="t">Optical receiver</text>
+  <line x1="820" y1="450" x2="820" y2="412" class="l" marker-end="url(#a)"/>
+  <line x1="820" y1="340" x2="820" y2="302" class="l" marker-end="url(#a)"/>
+  <text x="820" y="575" class="t" style="font-size:13px">own power supply</text>
+
+  <!-- 500 remote receiver -->
+  <rect x="720" y="30" width="200" height="80" class="b"/>
+  <text x="820" y="62" class="n">500</text><text x="820" y="84" class="t">Remote receiver</text><text x="820" y="100" class="t" style="font-size:12px">(verifies signatures)</text>
+  <line x1="905" y1="230" x2="905" y2="112" class="l" marker-end="url(#a)" stroke-dasharray="6,4"/>
+  <text x="895" y="140" class="s" text-anchor="end">site network /</text>
+  <text x="895" y="156" class="s" text-anchor="end">internet</text>
+
+  <text x="550" y="700" class="t" style="font-size:20px;font-weight:bold">FIG. 1</text>
+</svg>

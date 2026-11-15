@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="900" viewBox="0 0 1100 900">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#000}
+      .b{fill:#fff;stroke:#000;stroke-width:2}
+      .l{stroke:#000;stroke-width:2;fill:none}
+      .t{font-size:15px;text-anchor:middle}
+      .y{font-size:14px;font-weight:bold}
+    </style>
+  </defs>
+  <rect width="1100" height="900" fill="#fff"/>
+
+  <text x="40" y="40" style="font-size:16px;font-weight:bold">Remote receiver 500</text>
+
+  <!-- main column centre x=400 -->
+  <rect x="300" y="60" width="200" height="56" rx="28" class="b"/>
+  <text x="400" y="94" class="t">Record received</text>
+  <line x1="400" y1="116" x2="400" y2="158" class="l" marker-end="url(#a)"/>
+
+  <!-- decision 1 -->
+  <polygon points="400,160 520,225 400,290 280,225" class="b"/>
+  <text x="400" y="220" class="t">Signature valid</text>
+  <text x="400" y="238" class="t">for this device?</text>
+  <line x1="520" y1="225" x2="648" y2="225" class="l" marker-end="url(#a)"/>
+  <text x="560" y="215" class="y">No</text>
+  <rect x="650" y="190" width="220" height="70" class="b"/>
+  <text x="760" y="220" class="t">Reject record;</text>
+  <text x="760" y="240" class="t">log forgery attempt</text>
+
+  <line x1="400" y1="290" x2="400" y2="338" class="l" marker-end="url(#a)"/>
+  <text x="410" y="318" class="y">Yes</text>
+
+  <!-- decision 2 -->
+  <polygon points="400,340 520,405 400,470 280,405" class="b"/>
+  <text x="400" y="400" class="t">Sequence number</text>
+  <text x="400" y="418" class="t">= last + 1?</text>
+  <line x1="520" y1="405" x2="648" y2="405" class="l" marker-end="url(#a)"/>
+  <text x="560" y="395" class="y">No</text>
+  <rect x="650" y="365" width="220" height="80" class="b"/>
+  <text x="760" y="393" class="t">Repeat → discard</text>
+  <text x="760" y="413" class="t">Gap → report missing</text>
+  <text x="760" y="433" class="t">records</text>
+  <polyline points="760,445 760,520 402,520" class="l" marker-end="url(#a)"/>
+  <text x="770" y="490" class="t" style="text-anchor:start;font-size:13px">if gap: keep record</text>
+
+  <line x1="400" y1="470" x2="400" y2="538" class="l" marker-end="url(#a)"/>
+  <text x="410" y="500" class="y">Yes</text>
+
+  <!-- store -->
+  <rect x="280" y="540" width="240" height="70" class="b"/>
+  <text x="400" y="570" class="t">Store record; correlate local</text>
+  <text x="400" y="590" class="t">time with receipt timestamp</text>
+  <line x1="400" y1="610" x2="400" y2="648" class="l" marker-end="url(#a)"/>
+
+  <rect x="280" y="650" width="240" height="56" class="b"/>
+  <text x="400" y="683" class="t">Reset overdue timer</text>
+  <line x1="400" y1="706" x2="400" y2="738" class="l" marker-end="url(#a)"/>
+  <rect x="330" y="740" width="140" height="50" rx="25" class="b"/>
+  <text x="400" y="770" class="t">Done</text>
+
+  <!-- watchdog branch -->
+  <rect x="650" y="600" width="240" height="56" rx="28" class="b"/>
+  <text x="770" y="633" class="t">Overdue timer (per device)</text>
+  <line x1="770" y1="656" x2="770" y2="688" class="l" marker-end="url(#a)"/>
+  <polygon points="770,690 890,745 770,800 650,745" class="b"/>
+  <text x="770" y="740" class="t">No valid record</text>
+  <text x="770" y="758" class="t">within interval?</text>
+  <line x1="890" y1="745" x2="948" y2="745" class="l" marker-end="url(#a)"/>
+  <text x="900" y="735" class="y">Yes</text>
+  <rect x="950" y="705" width="130" height="80" class="b"/>
+  <text x="1015" y="735" class="t">Raise</text>
+  <text x="1015" y="755" class="t">overdue</text>
+  <text x="1015" y="775" class="t">alarm</text>
+
+  <text x="550" y="870" class="t" style="font-size:20px;font-weight:bold">FIG. 4</text>
+</svg>

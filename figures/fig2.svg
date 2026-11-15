@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#000}
+      .b{fill:#fff;stroke:#000;stroke-width:2}
+      .sig{fill:#e8e8e8;stroke:#000;stroke-width:2}
+      .l{stroke:#000;stroke-width:2;fill:none}
+      .t{font-size:14px;text-anchor:middle}
+      .n{font-size:15px;font-weight:bold;text-anchor:middle}
+    </style>
+  </defs>
+  <rect width="1100" height="420" fill="#fff"/>
+
+  <text x="40" y="60" style="font-size:16px;font-weight:bold">400  Operating-data record</text>
+
+  <!-- bracket over signed fields -->
+  <polyline points="40,105 40,92 900,92 900,105" class="l"/>
+  <text x="470" y="84" class="t">fields covered by the signature</text>
+
+  <!-- fields: 8 x ~ (40..1060) -->
+  <rect x="40"  y="110" width="122" height="90" class="b"/>
+  <text x="101" y="148" class="t">Device</text><text x="101" y="166" class="t">identifier</text>
+
+  <rect x="162" y="110" width="122" height="90" class="b"/>
+  <text x="223" y="148" class="t">Sequence</text><text x="223" y="166" class="t">number</text>
+
+  <rect x="284" y="110" width="122" height="90" class="b"/>
+  <text x="345" y="140" class="t">Local</text><text x="345" y="158" class="t">time</text><text x="345" y="176" class="t">counter</text>
+
+  <rect x="406" y="110" width="122" height="90" class="b"/>
+  <text x="467" y="148" class="t">Sensor</text><text x="467" y="166" class="t">readings</text>
+
+  <rect x="528" y="110" width="122" height="90" class="b"/>
+  <text x="589" y="148" class="t">Output</text><text x="589" y="166" class="t">states</text>
+
+  <rect x="650" y="110" width="122" height="90" class="b"/>
+  <text x="711" y="140" class="t">Alarm and</text><text x="711" y="158" class="t">status</text><text x="711" y="176" class="t">flags</text>
+
+  <rect x="772" y="110" width="128" height="90" class="b"/>
+  <text x="836" y="140" class="t">Neural-</text><text x="836" y="158" class="t">network</text><text x="836" y="176" class="t">outputs</text>
+
+  <rect x="900" y="110" width="160" height="90" class="sig"/>
+  <text x="980" y="148" class="t" style="font-weight:bold">Digital</text><text x="980" y="166" class="t" style="font-weight:bold">signature</text>
+
+  <!-- notes -->
+  <line x1="223" y1="200" x2="223" y2="250" class="l"/>
+  <text x="223" y="270" class="t">strictly increasing;</text>
+  <text x="223" y="288" class="t">gaps and repeats are detectable</text>
+
+  <line x1="345" y1="200" x2="345" y2="320" class="l"/>
+  <text x="345" y="340" class="t">drifts; corrected against relay</text>
+  <text x="345" y="358" class="t">receipt timestamps</text>
+
+  <line x1="980" y1="200" x2="980" y2="250" class="l"/>
+  <text x="980" y="270" class="t">made with private key</text>
+  <text x="980" y="288" class="t">in key store 108</text>
+
+  <text x="550" y="405" class="t" style="font-size:20px;font-weight:bold">FIG. 2</text>
+</svg>

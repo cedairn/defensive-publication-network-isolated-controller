@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you refer to this defensive publication, please cite it as below."
+type: report
+title: "Defensive Publication: Network-Isolated Autonomous Controller with Unidirectional Data Egress"
+authors:
+  - family-names: Beard
+    given-names: Ian
+    affiliation: "cedairn open design"
+    website: "https://cedairn.com"
+date-released: 2026-11-14
+license: CC-BY-4.0
+repository: "https://github.com/cedairn/defensive-publication-network-isolated-controller"
+keywords:
+  - defensive publication
+  - prior art
+  - network isolation
+  - unidirectional data diode
+  - immutable firmware
+  - embedded control
+  - refrigeration
