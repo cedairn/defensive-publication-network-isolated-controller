@@ -1,6 +1,6 @@
 # Defensive Publication: Network-Isolated Autonomous Controller with Unidirectional Data Egress
 
-**First published:** 14 November 2026  
+**First published:** 15 November 2026  
 **Author:** Ian Beard — [cedairn open design](https://cedairn.com)  
 **Licence:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -45,7 +45,7 @@ which is detected, but cannot change control behaviour or forge data.
 ## Citing
 
 Beard, I. (2026). *Defensive Publication: Network-Isolated Autonomous Controller with
-Unidirectional Data Egress.* cedairn open design. First published 14 November 2026.
+Unidirectional Data Egress.* cedairn open design. First published 15 November 2026.
 https://github.com/cedairn/defensive-publication-network-isolated-controller
 
 ## Licence
