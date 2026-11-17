@@ -52,6 +52,7 @@ https://doi.org/10.5281/zenodo.24242916
 ## Also archived at
 
 - Zenodo: https://doi.org/10.5281/zenodo.24242916
+- Technical Disclosure Commons: https://www.tdcommons.org/dpubs_series/13062/ (posted 15 November 2026)
 
 ## Licence
 
